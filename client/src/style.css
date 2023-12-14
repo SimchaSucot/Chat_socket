@@ -136,6 +136,7 @@ li.others {
 @media only screen and (max-width: 600px) {
   .container {
     flex-direction: column;
+    height: 100vh;
   }
 
   #left-sidebar, #right-content {
