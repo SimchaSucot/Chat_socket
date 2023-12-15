@@ -3,6 +3,12 @@ import { createServer } from "node:http";
 import { Server } from "socket.io";
 import cors from "cors";
 
+import mongoose from "mongoose";
+import { ConnectedUser, DbMessage, StorMessage } from "./models.js";
+
+const uri = "mongodb+srv://simchasucot:eatKvML35vd5jLpV@cluster0.hq44p4s.mongodb.net/?retryWrites=true&w=majority";
+
+mongoose.connect(uri);
 const app = express();
 const server = createServer(app);
 app.use(cors());

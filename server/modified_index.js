@@ -4,9 +4,11 @@ import { Server } from "socket.io";
 import cors from "cors";
 
 import mongoose from "mongoose";
-import { ConnectedUser, DbMessage, StorMessage } from "./models";
+import { ConnectedUser, DbMessage, StorMessage } from "./models.js";
 
-mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true });
+const uri = "mongodb+srv://simchasucot:eatKvML35vd5jLpV@cluster0.hq44p4s.mongodb.net/?retryWrites=true&w=majority";
+
+mongoose.connect(process.env.MONGO_URI);
 const app = express();
 const server = createServer(app);
 app.use(cors());
